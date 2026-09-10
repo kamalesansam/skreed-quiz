@@ -49,7 +49,7 @@ export function Preloader({ ready, onDone }: { ready: boolean; onDone: () => voi
       </div>
       <div className="flex items-end justify-between gap-6">
         <p className="max-w-[22ch] text-lg leading-snug" style={{ color: 'var(--muted)' }}>
-          Preparing 240 shades and one very honest test.
+          Loading 240 shades.
         </p>
         <motion.span className="mono text-6xl md:text-8xl font-medium tracking-tight tabular-nums">{text}</motion.span>
       </div>

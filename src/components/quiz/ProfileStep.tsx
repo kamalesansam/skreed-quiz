@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { ArrowRight } from '@phosphor-icons/react';
 import { COPY, GENS, type GenId } from '@/data/quiz';
 import { DEVICE_GROUPS } from '@/data/devices';
 import type { Profile } from '@/lib/storage';
@@ -148,8 +147,7 @@ export function ProfileStep({ initial, onSubmit }: Props) {
         </div>
 
         <Button type="submit" variant="primary">
-          Begin the samples
-          <ArrowRight size={18} weight="bold" />
+          Start the first sample
         </Button>
       </form>
     </motion.section>

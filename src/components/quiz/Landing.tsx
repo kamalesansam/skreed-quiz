@@ -3,7 +3,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
-import { ArrowRight } from '@phosphor-icons/react';
 import { COPY, OUTCOME_LIST } from '@/data/quiz';
 import { SHADES, readableOn, sampleShades } from '@/data/shades';
 import { sound } from '@/lib/sound';
@@ -67,7 +66,6 @@ function Hero({ onStart, webgl, reduce }: { onStart: () => void; webgl: boolean;
         <div className="mt-8">
           <Button onClick={onStart} variant="primary" className="text-lg">
             {COPY.cta}
-            <ArrowRight size={20} weight="bold" />
           </Button>
         </div>
       </div>
@@ -251,7 +249,6 @@ function Closing({ onStart }: { onStart: () => void }) {
       <div className="mt-10">
         <Button onClick={onStart} variant="primary" className="text-lg">
           {COPY.cta}
-          <ArrowRight size={20} weight="bold" />
         </Button>
       </div>
       <footer className="mt-24 flex w-full flex-wrap items-center justify-between gap-4 border-t pt-6 text-sm hairline" style={{ color: 'var(--muted)' }}>

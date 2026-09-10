@@ -61,8 +61,9 @@ export async function renderStoryCard(opts: {
   ctx.fillStyle = faint;
   ctx.font = `400 28px ${mono}`;
   ctx.textBaseline = 'top';
-  ctx.fillText('THE SHADE DIAGNOSIS', 96 + logoW + 32, 118);
-  ctx.fillText(`CONFIDENCE ${outcome.confidence}%  ·  TOP ${outcome.rarity}%`, 96 + logoW + 32, 158);
+  ctx.font = `500 30px ${body}`;
+  ctx.fillText('The Shade Diagnosis', 96 + logoW + 32, 116);
+  ctx.fillText(`Confidence ${outcome.confidence}%, top ${outcome.rarity}%`, 96 + logoW + 32, 158);
 
   // Hairline
   ctx.fillStyle = hair;
@@ -105,7 +106,7 @@ export async function renderStoryCard(opts: {
   ctx.fillText(outcome.shade, cx, cy + r + 56);
   ctx.fillStyle = faint;
   ctx.font = `400 30px ${mono}`;
-  ctx.fillText(`${outcome.hex.toUpperCase()}  ·  ${outcome.family}  ·  ${outcome.finish}`, cx, cy + r + 140);
+  ctx.fillText(`${outcome.hex.toUpperCase()} in ${outcome.family}, ${outcome.finish.toLowerCase()} finish`, cx, cy + r + 140);
 
   // Compatible dots
   const dots = outcome.compatible.map((n) => shadeHex(n));

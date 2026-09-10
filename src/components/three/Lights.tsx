@@ -12,6 +12,7 @@ export function StudioLights({ intensity = 1 }: { intensity?: number }) {
       <ambientLight intensity={0.55 * intensity} />
       <directionalLight position={[3, 5, 4]} intensity={1.6 * intensity} />
       <directionalLight position={[-4, 2, -3]} intensity={0.7 * intensity} color="#dfe6ff" />
+      <directionalLight position={[0, 3, -6]} intensity={0.9 * intensity} color="#ffffff" />
       <Environment resolution={128}>
         <Lightformer form="rect" intensity={2.2} position={[0, 4, 2]} scale={[6, 3, 1]} target={[0, 0, 0]} />
         <Lightformer form="rect" intensity={1.2} position={[-5, 1, 3]} scale={[2, 5, 1]} target={[0, 0, 0]} color="#fff4e6" />

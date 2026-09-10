@@ -9,6 +9,7 @@ import { CaseModel } from './CaseModel';
 import { StudioLights } from './Lights';
 import type { Finish } from '@/data/quiz';
 import { cn } from '@/lib/utils';
+import { isLight } from '@/data/shades';
 
 type Props = {
   hex: string;
@@ -53,7 +54,8 @@ export function CaseView({ hex, finish, progress, follow, float = true, scale = 
     <View className={cn('absolute inset-0', className)} visible={visible}>
       <PerspectiveCamera makeDefault position={[0, 0, 6.2]} fov={30} />
       <Suspense fallback={null}>
-        <StudioLights />
+        {/* Dark shades on a dark ground need more edge light to keep the silhouette. */}
+        <StudioLights intensity={isLight(hex) ? 1 : 1.75} />
         <Rig progress={progress} follow={follow}>
           <Float speed={float ? 1.4 : 0} rotationIntensity={float ? 0.35 : 0} floatIntensity={float ? 0.8 : 0}>
             <CaseModel hex={hex} finish={finish} scale={scale} rotation={[0.1, 0, 0]} />

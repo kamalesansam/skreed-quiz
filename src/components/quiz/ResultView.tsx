@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, useReducedMotion, useScroll } from 'motion/react';
-import { ArrowUpRight, ArrowCounterClockwise } from '@phosphor-icons/react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import CountUp from '@/components/CountUp';
@@ -38,6 +37,10 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
   const shop = shopUrl(outcome.familySlug, outcome.family, device?.series);
   const ink = readableOn(outcome.hex);
   const faint = ink === '#171717' ? 'rgba(23,23,23,0.6)' : 'rgba(247,246,243,0.66)';
+  // The lab slip is always paper with ink, whatever the shade behind it.
+  const slipInk = '#171717';
+  const slipMuted = 'rgba(23,23,23,0.56)';
+  const slipHair = 'rgba(23,23,23,0.14)';
 
   useEffect(() => {
     if (mode !== 'live') return;
@@ -49,12 +52,6 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
   }, [mode, outcome]);
 
   const ease = [0.16, 1, 0.3, 1] as const;
-  const item = (i: number) => ({
-    initial: reduce ? false : { opacity: 0, y: 26 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.3 },
-    transition: { duration: 0.7, ease, delay: 0.05 * i },
-  });
 
   return (
     <motion.article
@@ -71,17 +68,8 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
           <motion.p
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease, delay: 0.2 }}
-            className="mono text-sm"
-            style={{ color: faint }}
-          >
-            Diagnosis complete
-          </motion.p>
-          <motion.p
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.35 }}
-            className="mt-6 text-xl md:text-2xl"
+            className="text-xl md:text-2xl"
             style={{ color: faint }}
           >
             {name ? `${name}, you are` : 'You are'}
@@ -105,8 +93,8 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
           {answers.length > 0 && (
             <motion.div initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }} className="mt-8 max-w-sm">
               <Vial answers={answers} />
-              <p className="mt-3 mono text-xs" style={{ color: faint }}>
-                Your twelve samples
+              <p className="mt-3 text-sm" style={{ color: faint }}>
+                Your twelve samples, in order.
               </p>
             </motion.div>
           )}
@@ -126,17 +114,17 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
       <div ref={report} className="mx-auto w-full max-w-[1400px] px-5 pb-24 md:px-10">
         <div className="grid gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-7">
-            <motion.section {...item(0)} className="border-t pt-8" style={{ borderColor: 'var(--hair)' }}>
+            <section>
               <h2 className="text-2xl md:text-3xl">Personality profile</h2>
               <p className="mt-4 max-w-[60ch] text-lg leading-relaxed">{outcome.personality}</p>
-            </motion.section>
+            </section>
 
-            <motion.section {...item(1)} className="mt-12 border-t pt-8" style={{ borderColor: 'var(--hair)' }}>
+            <section className="mt-14">
               <h2 className="text-2xl md:text-3xl">Colour profile</h2>
               <p className="mt-4 max-w-[60ch] text-lg leading-relaxed">{outcome.colour}</p>
-            </motion.section>
+            </section>
 
-            <motion.section {...item(2)} className="mt-12 border-t pt-8" style={{ borderColor: 'var(--hair)' }}>
+            <section className="mt-14">
               <h2 className="text-2xl md:text-3xl">Recommended shade</h2>
               <div className="mt-5 flex items-center gap-5">
                 <span className="h-20 w-20 shrink-0 rounded-full border" style={{ background: outcome.hex, borderColor: 'var(--hair)', boxShadow: 'inset -8px -10px 18px rgba(0,0,0,0.18), inset 6px 8px 14px rgba(255,255,255,0.28)' }} />
@@ -146,13 +134,13 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
                     {outcome.hex.toUpperCase()} from the {outcome.family} family
                   </p>
                   <p className="mt-1 text-sm" style={{ color: faint }}>
-                    Finish: {outcome.finish}
+                    {outcome.finish} finish
                   </p>
                 </div>
               </div>
-            </motion.section>
+            </section>
 
-            <motion.section {...item(3)} className="mt-12 border-t pt-8" style={{ borderColor: 'var(--hair)' }}>
+            <section className="mt-14">
               <h2 className="text-2xl md:text-3xl">Also compatible with</h2>
               <p className="mt-2 text-sm" style={{ color: faint }}>
                 Five shades from other families that sit well next to yours. Throw them around.
@@ -160,20 +148,15 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
               <div className="mt-5">
                 <CompatibleBeads names={outcome.compatible} />
               </div>
-            </motion.section>
+            </section>
           </div>
 
           <aside className="min-w-0 md:col-span-5">
-            <motion.div {...item(1)} className="sticky top-24 min-w-0 rounded-[16px] border p-5 md:p-8" style={{ borderColor: 'var(--hair)', background: 'color-mix(in oklab, var(--fg) 7%, transparent)' }}>
-              <div className="flex items-center justify-between">
-                <Logomark className="h-7" />
-                <span className="mono text-xs" style={{ color: faint }}>
-                  Lab report
-                </span>
-              </div>
+            <div className="sticky top-24 min-w-0 rounded-[16px] p-5 md:p-8" style={{ background: '#F7F6F3', color: slipInk, boxShadow: '0 30px 60px -30px rgba(0,0,0,0.35)' }}>
+              <Logomark className="h-7" />
               <div className="mt-8 grid grid-cols-2 gap-6">
                 <div>
-                  <p className="text-sm" style={{ color: faint }}>
+                  <p className="text-sm" style={{ color: slipMuted }}>
                     Confidence score
                   </p>
                   <p className="mono mt-1 text-3xl font-medium md:text-4xl">
@@ -181,7 +164,7 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm" style={{ color: faint }}>
+                  <p className="text-sm" style={{ color: slipMuted }}>
                     Rarity
                   </p>
                   <p className="mono mt-1 text-3xl font-medium md:text-4xl">
@@ -190,7 +173,7 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
                 </div>
               </div>
               <p className="mt-8 font-heading text-xl font-semibold leading-snug">{COPY.closing}</p>
-              <p className="mt-3 text-sm" style={{ color: faint }}>
+              <p className="mt-3 text-sm" style={{ color: slipMuted }}>
                 {COPY.shop}
               </p>
               <a
@@ -199,34 +182,31 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
                 rel="noopener noreferrer"
                 onClick={() => track('quiz_shop_click', { outcome: outcome.id, device: device?.id ?? 'none' })}
                 className="btn mt-6 w-full whitespace-normal text-center leading-tight"
-                style={{ background: ink, color: outcome.hex }}
+                style={{ background: outcome.hex, color: ink }}
               >
-                <span>
-                  Shop {outcome.family} {device && device.series !== 'other' ? `for ${device.label}` : 'cases'}
-                </span>
-                <ArrowUpRight size={18} weight="bold" className="shrink-0" />
+                Shop {outcome.family} {device && device.series !== 'other' ? `for ${device.label}` : 'cases'}
               </a>
-              <div className="mt-8">
-                <p className="mb-3 text-sm" style={{ color: faint }}>
+              <div className="mt-8" style={{ ['--hair' as string]: slipHair }}>
+                <p className="mb-3 text-sm" style={{ color: slipMuted }}>
                   Share your diagnosis
                 </p>
                 <ShareBar outcome={outcome} name={name} />
               </div>
               {mode === 'live' && onRetake ? (
-                <button type="button" onClick={onRetake} className="mt-6 inline-flex items-center gap-2 text-sm underline-offset-4 hover:underline" style={{ color: faint }}>
-                  <ArrowCounterClockwise size={16} weight="bold" /> Take it again
+                <button type="button" onClick={onRetake} className="mt-6 text-sm underline-offset-4 hover:underline" style={{ color: slipMuted }}>
+                  Retake the diagnosis
                 </button>
               ) : (
-                <Link href="/" className="btn btn-ghost mt-6 w-full" style={{ borderColor: 'var(--hair)', color: ink }}>
-                  Find your own shade
+                <Link href="/" className="btn btn-ghost mt-6 w-full" style={{ borderColor: slipHair, color: slipInk }}>
+                  Start the diagnosis
                 </Link>
               )}
-            </motion.div>
+            </div>
           </aside>
         </div>
 
         {/* Others */}
-        <motion.section {...item(0)} className="mt-24 border-t pt-8" style={{ borderColor: 'var(--hair)' }}>
+        <section className="mt-24">
           <h2 className="text-2xl md:text-3xl">The other nine</h2>
           <div className="no-scrollbar -mx-5 mt-6 flex snap-x gap-3 overflow-x-auto px-5 pb-2 md:-mx-10 md:px-10">
             {OUTCOME_LIST.filter((o) => o.id !== outcome.id).map((o) => (
@@ -239,7 +219,7 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
               </div>
             ))}
           </div>
-        </motion.section>
+        </section>
       </div>
     </motion.article>
   );
