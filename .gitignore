@@ -44,3 +44,6 @@ next-env.d.ts
 .playwright-mcp/
 shot-*.jpeg
 shot-*.png
+
+# Plugin runtime state
+.claude-flow/
