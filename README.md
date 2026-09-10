@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Shade Diagnosis
 
-## Getting Started
+Skreed India launch quiz. "There are 240 personalities. Which one are you?"
 
-First, run the development server:
+Next.js 16, TypeScript, Tailwind v4, Motion, React Three Fiber. Deploys to Vercel with no configuration.
+
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` before deploying so share links and preview images point at the live domain.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | What |
+|---|---|
+| `src/data/quiz.ts` | Every question, option, outcome and line of copy. Edit content here. |
+| `src/data/devices.ts` | Device list and the verified skreed.com en-in product handles per family. |
+| `src/data/shades.json` | All 240 shades with hex values, from the CMYK sheet. |
+| `src/components/quiz/` | The screens: Preloader, Landing, ProfileStep, QuestionStep, Analyzing, ResultView, ShareBar. |
+| `src/components/three/` | Everything WebGL: the case model, the 3D option illustrations, the bead field. |
+| `src/components/ui/` | Logo masks, buttons, toasts, offline banner, burst layer. |
+| `src/components/` (root) | React Bits components owned as code: Ballpit, BlurText, SplitText, CountUp, ShinyText. |
+| `src/lib/` | Scoring, storage, share, sound, analytics, the story-card renderer. |
+| `src/app/result/[slug]` | Shareable result pages with their own preview image (`/api/og`). |
+| `public/models/skreed-case.glb` | The Skreed case, meshopt-compressed from the product team's model. |
+| `docs/concept.md` | The experience concept, stack decision and the asset wishlist. |
 
-## Learn More
+## Swapping in real assets
 
-To learn more about Next.js, take a look at the following resources:
+- Any option in `src/data/quiz.ts` accepts `image: '/illustrations/name.png'` and will show that instead of the live 3D glyph.
+- Drop a grain texture at `public/textures/grain.png` and set `--grain: url(/textures/grain.png)` on `:root` in `globals.css`.
+- The reveal chime is `public/audio/chime.mp3`, the brand's "Go Beyond Basic" closing chime.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Analytics
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Set `NEXT_PUBLIC_GTM_ID` to load Google Tag Manager. Events: `quiz_start`, `quiz_profile`, `quiz_answer`, `quiz_complete`, `quiz_share`, `quiz_shop_click`, `quiz_retake`.
