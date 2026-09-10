@@ -37,4 +37,4 @@ Open http://localhost:3000. Copy `.env.example` to `.env.local` and set `NEXT_PU
 
 ## Analytics
 
-Set `NEXT_PUBLIC_GTM_ID` to load Google Tag Manager. Events: `quiz_start`, `quiz_profile`, `quiz_answer`, `quiz_complete`, `quiz_share`, `quiz_shop_click`, `quiz_retake`.
+Set `NEXT_PUBLIC_GTM_ID` to load Google Tag Manager. Events: `quiz_start`, `quiz_profile`, `quiz_answer`, `quiz_complete`, `quiz_share`, `product_view_click`, `lead_submit`, `lead_success`, `lead_error`, `quiz_retake`.

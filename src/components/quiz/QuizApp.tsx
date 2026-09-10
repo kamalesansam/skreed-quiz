@@ -200,7 +200,7 @@ export default function QuizApp() {
             {step === 'analyzing' && <Analyzing key="analyzing" onDone={finishAnalyzing} />}
 
             {step === 'result' && outcome && (
-              <ResultView key="result" outcome={outcome} name={profile.name} deviceId={profile.device} answers={answers} webgl={webgl} mode="live" onRetake={retake} />
+              <ResultView key="result" outcome={outcome} name={profile.name} deviceId={profile.device} gen={profile.gen} answers={answers} webgl={webgl} mode="live" onRetake={retake} />
             )}
           </AnimatePresence>
         </main>

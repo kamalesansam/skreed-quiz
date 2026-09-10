@@ -1,0 +1,233 @@
+{
+  "options": [
+    {
+      "name": "Model",
+      "values": [
+        "iPhone 17 Pro Max",
+        "iPhone 17 Pro",
+        "iPhone 17 Air",
+        "iPhone 17"
+      ]
+    },
+    {
+      "name": "Color",
+      "values": [
+        "Mimosa",
+        "Lemonade",
+        "Dandelion",
+        "Bright Yellow",
+        "Pastel Yellow",
+        "Neon Yellow",
+        "Pale Yellow",
+        "Lemon",
+        "Golden",
+        "Banana",
+        "Dijon",
+        "Canary",
+        "Limoncello",
+        "Citrine",
+        "Custard",
+        "Chamomile",
+        "Sunflower",
+        "Bumblebee",
+        "Buttercup",
+        "Tuscany",
+        "Mustard",
+        "Sunshine",
+        "Sunbeam",
+        "Daffodil"
+      ]
+    },
+    {
+      "name": "Case Type",
+      "values": [
+        "Tough - Matte",
+        "Tough - Gloss",
+        "MagTough - Matte",
+        "MagTough - Gloss"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 44847124545736,
+      "title": "iPhone 17 Pro Max / Sunflower / Tough - Matte",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Sunflower",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44748997066952,
+      "title": "iPhone 17 Pro Max / Sunflower / Tough - Gloss",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Sunflower",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847187591368,
+      "title": "iPhone 17 Pro Max / Sunflower / MagTough - Matte",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Sunflower",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847156068552,
+      "title": "iPhone 17 Pro Max / Sunflower / MagTough - Gloss",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Sunflower",
+      "option3": "MagTough - Gloss",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847124578504,
+      "title": "iPhone 17 Pro / Sunflower / Tough - Matte",
+      "option1": "iPhone 17 Pro",
+      "option2": "Sunflower",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44748997099720,
+      "title": "iPhone 17 Pro / Sunflower / Tough - Gloss",
+      "option1": "iPhone 17 Pro",
+      "option2": "Sunflower",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847187624136,
+      "title": "iPhone 17 Pro / Sunflower / MagTough - Matte",
+      "option1": "iPhone 17 Pro",
+      "option2": "Sunflower",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847156101320,
+      "title": "iPhone 17 Pro / Sunflower / MagTough - Gloss",
+      "option1": "iPhone 17 Pro",
+      "option2": "Sunflower",
+      "option3": "MagTough - Gloss",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847122448584,
+      "title": "iPhone 17 Pro Max / Mimosa / Tough - Matte",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Mimosa",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44748994969800,
+      "title": "iPhone 17 Pro Max / Mimosa / Tough - Gloss",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Mimosa",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847185494216,
+      "title": "iPhone 17 Pro Max / Mimosa / MagTough - Matte",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Mimosa",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847153971400,
+      "title": "iPhone 17 Pro Max / Mimosa / MagTough - Gloss",
+      "option1": "iPhone 17 Pro Max",
+      "option2": "Mimosa",
+      "option3": "MagTough - Gloss",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847122481352,
+      "title": "iPhone 17 Pro / Mimosa / Tough - Matte",
+      "option1": "iPhone 17 Pro",
+      "option2": "Mimosa",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44748995002568,
+      "title": "iPhone 17 Pro / Mimosa / Tough - Gloss",
+      "option1": "iPhone 17 Pro",
+      "option2": "Mimosa",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847185526984,
+      "title": "iPhone 17 Pro / Mimosa / MagTough - Matte",
+      "option1": "iPhone 17 Pro",
+      "option2": "Mimosa",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847154004168,
+      "title": "iPhone 17 Pro / Mimosa / MagTough - Gloss",
+      "option1": "iPhone 17 Pro",
+      "option2": "Mimosa",
+      "option3": "MagTough - Gloss",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847122514120,
+      "title": "iPhone 17 Air / Mimosa / Tough - Matte",
+      "option1": "iPhone 17 Air",
+      "option2": "Mimosa",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44748995035336,
+      "title": "iPhone 17 Air / Mimosa / Tough - Gloss",
+      "option1": "iPhone 17 Air",
+      "option2": "Mimosa",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847185559752,
+      "title": "iPhone 17 Air / Mimosa / MagTough - Matte",
+      "option1": "iPhone 17 Air",
+      "option2": "Mimosa",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847154036936,
+      "title": "iPhone 17 Air / Mimosa / MagTough - Gloss",
+      "option1": "iPhone 17 Air",
+      "option2": "Mimosa",
+      "option3": "MagTough - Gloss",
+      "price": 295000,
+      "available": true
+    }
+  ]
+}

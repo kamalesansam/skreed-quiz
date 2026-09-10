@@ -1,0 +1,251 @@
+{
+  "options": [
+    {
+      "name": "Model",
+      "values": [
+        "iPhone 16 Pro Max",
+        "iPhone 16 Pro",
+        "iPhone 16 Plus",
+        "iPhone 16"
+      ]
+    },
+    {
+      "name": "Color",
+      "values": [
+        "Cyan",
+        "Navy Blue",
+        "Turquoise",
+        "Aqua",
+        "Royal Blue",
+        "Sapphire",
+        "Classic Blue",
+        "Baby Blue",
+        "Pigeon Blue",
+        "Egyptian Blue",
+        "Teal Blue",
+        "Ocean",
+        "Sky Blue",
+        "Indigo Blue",
+        "Powder Blue",
+        "Midnight Blue",
+        "Aquamarine",
+        "Space Blue",
+        "Cobalt",
+        "Azure",
+        "Prussian",
+        "Electric Blue",
+        "Stone Blue",
+        "Blueberry"
+      ]
+    },
+    {
+      "name": "Case Type",
+      "values": [
+        "Tough - Matte",
+        "Tough - Gloss",
+        "MagTough - Matte",
+        "MagTough - Gloss"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 44847253749960,
+      "title": "iPhone 16 Pro Max / Navy Blue / Tough - Matte",
+      "option1": "iPhone 16 Pro Max",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847254536392,
+      "title": "iPhone 16 Pro / Navy Blue / Tough - Matte",
+      "option1": "iPhone 16 Pro",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847255322824,
+      "title": "iPhone 16 Plus / Navy Blue / Tough - Matte",
+      "option1": "iPhone 16 Plus",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847256109256,
+      "title": "iPhone 16 / Navy Blue / Tough - Matte",
+      "option1": "iPhone 16",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44134809272520,
+      "title": "iPhone 16 Pro Max / Navy Blue / Tough - Gloss",
+      "option1": "iPhone 16 Pro Max",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44160260341960,
+      "title": "iPhone 16 Pro / Navy Blue / Tough - Gloss",
+      "option1": "iPhone 16 Pro",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44160260374728,
+      "title": "iPhone 16 Plus / Navy Blue / Tough - Gloss",
+      "option1": "iPhone 16 Plus",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44160260407496,
+      "title": "iPhone 16 / Navy Blue / Tough - Gloss",
+      "option1": "iPhone 16",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847321186504,
+      "title": "iPhone 16 Pro Max / Navy Blue / MagTough - Matte",
+      "option1": "iPhone 16 Pro Max",
+      "option2": "Navy Blue",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847321972936,
+      "title": "iPhone 16 Pro / Navy Blue / MagTough - Matte",
+      "option1": "iPhone 16 Pro",
+      "option2": "Navy Blue",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847322759368,
+      "title": "iPhone 16 Plus / Navy Blue / MagTough - Matte",
+      "option1": "iPhone 16 Plus",
+      "option2": "Navy Blue",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847253717192,
+      "title": "iPhone 16 Pro Max / Cyan / Tough - Matte",
+      "option1": "iPhone 16 Pro Max",
+      "option2": "Cyan",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847254503624,
+      "title": "iPhone 16 Pro / Cyan / Tough - Matte",
+      "option1": "iPhone 16 Pro",
+      "option2": "Cyan",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847255290056,
+      "title": "iPhone 16 Plus / Cyan / Tough - Matte",
+      "option1": "iPhone 16 Plus",
+      "option2": "Cyan",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847256076488,
+      "title": "iPhone 16 / Cyan / Tough - Matte",
+      "option1": "iPhone 16",
+      "option2": "Cyan",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44116816298184,
+      "title": "iPhone 16 Pro Max / Cyan / Tough - Gloss",
+      "option1": "iPhone 16 Pro Max",
+      "option2": "Cyan",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44160260243656,
+      "title": "iPhone 16 Pro / Cyan / Tough - Gloss",
+      "option1": "iPhone 16 Pro",
+      "option2": "Cyan",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44160260276424,
+      "title": "iPhone 16 Plus / Cyan / Tough - Gloss",
+      "option1": "iPhone 16 Plus",
+      "option2": "Cyan",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44160260309192,
+      "title": "iPhone 16 / Cyan / Tough - Gloss",
+      "option1": "iPhone 16",
+      "option2": "Cyan",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44847321153736,
+      "title": "iPhone 16 Pro Max / Cyan / MagTough - Matte",
+      "option1": "iPhone 16 Pro Max",
+      "option2": "Cyan",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847321940168,
+      "title": "iPhone 16 Pro / Cyan / MagTough - Matte",
+      "option1": "iPhone 16 Pro",
+      "option2": "Cyan",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    },
+    {
+      "id": 44847322726600,
+      "title": "iPhone 16 Plus / Cyan / MagTough - Matte",
+      "option1": "iPhone 16 Plus",
+      "option2": "Cyan",
+      "option3": "MagTough - Matte",
+      "price": 295000,
+      "available": true
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "options": [
+    {
+      "name": "Model",
+      "values": [
+        "Samsung Galaxy S25 Ultra",
+        "Samsung Galaxy S25+",
+        "Samsung Galaxy S25"
+      ]
+    },
+    {
+      "name": "Color",
+      "values": [
+        "Aqua",
+        "Cyan",
+        "Navy Blue",
+        "Turquoise",
+        "Royal Blue",
+        "Sapphire",
+        "Classic Blue",
+        "Baby Blue",
+        "Pigeon Blue",
+        "Egyptian Blue",
+        "Teal Blue",
+        "Ocean",
+        "Sky Blue",
+        "Indigo Blue",
+        "Powder Blue",
+        "Midnight Blue",
+        "Aquamarine",
+        "Space Blue",
+        "Cobalt",
+        "Azure",
+        "Prussian",
+        "Electric Blue",
+        "Stone Blue",
+        "Blueberry"
+      ]
+    },
+    {
+      "name": "Case Type",
+      "values": [
+        "Tough - Matte",
+        "Tough - Gloss"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 44753971413192,
+      "title": "Samsung Galaxy S25 Ultra / Navy Blue / Tough - Matte",
+      "option1": "Samsung Galaxy S25 Ultra",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44753972199624,
+      "title": "Samsung Galaxy S25+ / Navy Blue / Tough - Matte",
+      "option1": "Samsung Galaxy S25+",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44753972986056,
+      "title": "Samsung Galaxy S25 / Navy Blue / Tough - Matte",
+      "option1": "Samsung Galaxy S25",
+      "option2": "Navy Blue",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44848815603912,
+      "title": "Samsung Galaxy S25 Ultra / Navy Blue / Tough - Gloss",
+      "option1": "Samsung Galaxy S25 Ultra",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44848816390344,
+      "title": "Samsung Galaxy S25+ / Navy Blue / Tough - Gloss",
+      "option1": "Samsung Galaxy S25+",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44848817176776,
+      "title": "Samsung Galaxy S25 / Navy Blue / Tough - Gloss",
+      "option1": "Samsung Galaxy S25",
+      "option2": "Navy Blue",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44753971347656,
+      "title": "Samsung Galaxy S25 Ultra / Aqua / Tough - Matte",
+      "option1": "Samsung Galaxy S25 Ultra",
+      "option2": "Aqua",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44753972134088,
+      "title": "Samsung Galaxy S25+ / Aqua / Tough - Matte",
+      "option1": "Samsung Galaxy S25+",
+      "option2": "Aqua",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44753972920520,
+      "title": "Samsung Galaxy S25 / Aqua / Tough - Matte",
+      "option1": "Samsung Galaxy S25",
+      "option2": "Aqua",
+      "option3": "Tough - Matte",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44848815538376,
+      "title": "Samsung Galaxy S25 Ultra / Aqua / Tough - Gloss",
+      "option1": "Samsung Galaxy S25 Ultra",
+      "option2": "Aqua",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44848816324808,
+      "title": "Samsung Galaxy S25+ / Aqua / Tough - Gloss",
+      "option1": "Samsung Galaxy S25+",
+      "option2": "Aqua",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    },
+    {
+      "id": 44848817111240,
+      "title": "Samsung Galaxy S25 / Aqua / Tough - Gloss",
+      "option1": "Samsung Galaxy S25",
+      "option2": "Aqua",
+      "option3": "Tough - Gloss",
+      "price": 245000,
+      "available": true
+    }
+  ]
+}

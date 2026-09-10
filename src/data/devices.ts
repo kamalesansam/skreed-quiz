@@ -131,8 +131,27 @@ const HANDLES: Record<SeriesKey, Record<string, string> | null> = {
 
 export const STORE = 'https://www.skreed.com/en-in';
 
+/** The en-in product handle for a family on a device series, or null when the store has no such page (unknown series, "other"). */
+export function handleFor(familySlug: string, series: SeriesKey): string | null {
+  return HANDLES[series]?.[familySlug] ?? null;
+}
+
+/**
+ * Normalise a model label so the quiz's device labels ("Galaxy S25+") compare equal to the
+ * storefront's Model option values ("Samsung Galaxy S25+", "Samsung Galaxy S26 Plus").
+ * Lowercase, drop the brand words samsung, google and apple, spell "+" as " plus", collapse whitespace.
+ */
+export function normalizeModel(label: string): string {
+  return label
+    .toLowerCase()
+    .replace(/\+/g, ' plus')
+    .replace(/\b(samsung|google|apple)\b/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function shopUrl(familySlug: string, familyName: string, series: SeriesKey | undefined): string {
-  const handle = series ? HANDLES[series]?.[familySlug] : undefined;
+  const handle = series ? handleFor(familySlug, series) : null;
   if (handle) return `${STORE}/products/${handle}`;
   return `${STORE}/search?q=${encodeURIComponent(familyName)}`;
 }

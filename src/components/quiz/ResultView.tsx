@@ -6,14 +6,14 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import CountUp from '@/components/CountUp';
 import { CompatibleBeads } from './CompatibleBeads';
+import { LeadCapture } from './LeadCapture';
+import { ProductPanel } from './ProductPanel';
 import { ShareBar } from './ShareBar';
 import { Vial } from './Vial';
 import { COPY, OUTCOME_LIST, type Outcome, type OutcomeId } from '@/data/quiz';
-import { deviceById, shopUrl } from '@/data/devices';
 import { readableOn } from '@/data/shades';
 import { burst } from '@/lib/burst';
 import { sound } from '@/lib/sound';
-import { track } from '@/lib/analytics';
 import { Logomark } from '@/components/ui/Logo';
 import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
 
@@ -23,18 +23,17 @@ type Props = {
   outcome: Outcome;
   name: string;
   deviceId?: string;
+  gen?: string | null;
   answers?: OutcomeId[];
   webgl: boolean;
   mode: 'live' | 'shared';
   onRetake?: () => void;
 };
 
-export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode, onRetake }: Props) {
+export function ResultView({ outcome, name, deviceId, gen = null, answers = [], webgl, mode, onRetake }: Props) {
   const reduce = useReducedMotion();
   const report = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: report, offset: ['start end', 'end start'] });
-  const device = deviceById(deviceId);
-  const shop = shopUrl(outcome.familySlug, outcome.family, device?.series);
   const ink = readableOn(outcome.hex);
   const faint = ink === '#171717' ? 'rgba(23,23,23,0.6)' : 'rgba(247,246,243,0.66)';
   // The lab slip is always paper with ink, whatever the shade behind it.
@@ -176,16 +175,8 @@ export function ResultView({ outcome, name, deviceId, answers = [], webgl, mode,
               <p className="mt-3 text-sm" style={{ color: slipMuted }}>
                 {COPY.shop}
               </p>
-              <a
-                href={shop}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => track('quiz_shop_click', { outcome: outcome.id, device: device?.id ?? 'none' })}
-                className="btn mt-6 w-full whitespace-normal text-center leading-tight"
-                style={{ background: outcome.hex, color: ink }}
-              >
-                Shop {outcome.family} {device && device.series !== 'other' ? `for ${device.label}` : 'cases'}
-              </a>
+              <ProductPanel outcome={outcome} deviceId={deviceId} mode={mode} />
+              <LeadCapture outcome={outcome} name={name} deviceId={deviceId} gen={gen} />
               <div className="mt-8" style={{ ['--hair' as string]: slipHair }}>
                 <p className="mb-3 text-sm" style={{ color: slipMuted }}>
                   Share your diagnosis
